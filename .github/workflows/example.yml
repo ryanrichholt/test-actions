@@ -1,0 +1,18 @@
+name: example workflow
+
+jobs:
+  matrix-good:
+    strategy:
+      matrix:
+        myvar: ["a", "b", "c"]
+    steps:
+      - name: matrix-good-step-${{ matrix.myvar }}
+        run: echo this is step ${{ matrix.myvar }}
+  matrix-bad:
+    strategy:
+      matrix:
+        myvar: ["a", "b", "c"]
+    steps:
+      - name: matrix-bad-step-${{ matrix.myvar }}
+        run: echo this is step ${{ matrix.myvar }}
+        
