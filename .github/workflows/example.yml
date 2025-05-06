@@ -4,6 +4,7 @@ on:
   push:
 
 jobs:
+  runs-on: ubuntu-latest
   matrix-good:
     strategy:
       matrix:
