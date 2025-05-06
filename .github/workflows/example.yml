@@ -1,6 +1,7 @@
 name: example workflow
 
-on: {}
+on:
+  push:
 
 jobs:
   matrix-good:
