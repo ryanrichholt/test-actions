@@ -1,5 +1,7 @@
 name: example workflow
 
+on: {}
+
 jobs:
   matrix-good:
     strategy:
