@@ -4,8 +4,8 @@ on:
   push:
 
 jobs:
-  runs-on: ubuntu-latest
   matrix-good:
+    runs-on: "ubuntu-latest"
     strategy:
       matrix:
         myvar: ["a", "b", "c"]
@@ -13,6 +13,7 @@ jobs:
       - name: matrix-good-step-${{ matrix.myvar }}
         run: echo this is step ${{ matrix.myvar }}
   matrix-bad:
+    runs-on: "ubuntu-latest"
     strategy:
       matrix:
         myvar: ["a", "b", "c"]
